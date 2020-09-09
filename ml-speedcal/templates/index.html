@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block title %}{{title}} calculator{% endblock %}
+{% block content %}
+
+
+<div class="container-fluid">
+    <form method="POST">
+        <div class='row'>
+
+            <div class="col-auto mt-2 mb-2">
+               
+                <input name="name" id="text" class="form-control form-cont-style" type="text" placeholder="monster name">
+                
+            </div>
+
+            <div class="col-auto mt-2 mb-2">
+               <input id = "mybutton" value="Search" class="btn btn-primary" type="button" > 
+            </div>
+
+            <div class="col-auto mt-2 mb-2">
+                <input id = "mybutton1" value="Reset" class="btn btn-primary" type="button" > 
+             </div>
+
+        </div>
+
+        <div class="row">
+           
+            <div class="col-auto mt-2 mb-2">
+               
+                <input id="base_speed" class="form-control" type="text" placeholder="Base speed">
+            </div>
+            
+        </div>
+
+        <div class="row">
+           
+            <div class="col-auto mt-2 mb-2">
+                
+                <input id='updated_speed' class="form-control" type="text" placeholder="updated speed">
+                
+            </div>
+            
+        </div>
+        
+    
+
+    <div class="row align-items-center">
+
+        <div class='col-auto align-self-center'>
+            <h3 style="color: white">Own runes</h3>
+        </div>
+
+        {% for i in range(3) %}
+
+        <div class="col-auto">
+
+            <select  id='speed1'  class="selectpicker select-style select-speed">
+                <option selected value='None'>None</option>
+                {% for x in speed %}
+                <option name='speed_rune' value="{{x}}">{{x}}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="row align-items-center">
+
+        <div class='col-auto'>
+            <h3 style="color: white">Ally runes</h3>
+        </div>
+
+        {% for i in range(3) %}
+
+        <div class="col-auto">
+
+            <select id = 'ts'data-width='fit'  class="selectpicker select-style select-speed">
+            
+                <option selected value='None'>None</option>
+                {% for x in tspeed %}
+                <option name='speed_rune' value="{{x}}">{{x}}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="row align-items-center">
+
+        <div class='col-auto'>
+            <h3 style="color: white">Ally runes</h3>
+        </div>
+
+
+        {% for i in range(3) %}
+
+        <div class="col-auto">
+
+            <select id = 'ts'data-width='fit'  class="selectpicker select-style select-speed">
+            
+                <option selected value='None'>None</option>
+                {% for x in tspeed %}
+                <option name='speed_rune' value="{{x}}">{{x}}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="row">
+        <div class="col-auto">
+            <select id="ranks" title="Rank 0" class="selectpicker select-style">
+                {% for x in ranks%}
+                <option value="{{x}}">{{x}}</option>
+                {% endfor %}
+
+            </select>
+        </div>
+
+        <div class="col-auto">
+            <select title="0%" id='gaurdian' class="selectpicker select-style">
+
+                {% for x in guard%}
+                <option value="{{x}}">{{x}}</option>
+                {% endfor %}
+
+            </select>
+        </div>
+    </div>
+</form>
+
+</div>
+
+{% endblock %}

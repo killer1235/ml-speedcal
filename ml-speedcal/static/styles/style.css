@@ -1,0 +1,8 @@
+body {
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.select-style {
+    padding: 10%;
+}
