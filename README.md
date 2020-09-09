@@ -1,2 +1,2 @@
 # ml-speedcal
-my own version of monster legends of speed calculator
+my own version of monster legends speed calculator
